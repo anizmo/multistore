@@ -1,10 +1,10 @@
 package com.anizmocreations.multistore.service;
 
+import com.anizmocreations.multistore.repository.StoresRepo;
 import com.anizmocreations.multistore.requests.StoreRequest;
 import com.anizmocreations.multistore.responses.ProductResponse;
 import com.anizmocreations.multistore.responses.StoreResponse;
 import com.anizmocreations.multistore.tables.Store;
-import com.anizmocreations.multistore.repository.StoresRepo;
 import com.anizmocreations.multistore.utils.Utility;
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -25,15 +25,15 @@ public class User {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int userId;
 
-  @Column(unique=true)
+  @Column(unique = true)
   private String username;
 
   private String password;
 
-  @Column(unique=true)
+  @Column(unique = true)
   private String email;
 
-  @Column(unique=true)
+  @Column(unique = true)
   private String phoneNumber;
 
   private Timestamp createdTime;

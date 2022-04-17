@@ -5,8 +5,6 @@ import com.anizmocreations.multistore.responses.StoreResponse;
 import com.anizmocreations.multistore.tables.Product;
 import com.anizmocreations.multistore.tables.Store;
 
-import java.util.stream.Collectors;
-
 public class Utility {
 
   public static StoreResponse convertStoreToStoreResponse(Store store) {

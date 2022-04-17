@@ -1,8 +1,8 @@
 package com.anizmocreations.multistore.controller;
 
 import com.anizmocreations.multistore.requests.LoginRequest;
-import com.anizmocreations.multistore.tables.User;
 import com.anizmocreations.multistore.service.LoginService;
+import com.anizmocreations.multistore.tables.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -39,7 +39,8 @@ public class LoginController {
   public User loginByEmail(@RequestBody LoginRequest loginRequest) {
     if (loginRequest.getEmail().isEmpty()
             || loginRequest.getPassword().isEmpty()) {
-      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Username and cannot be empty");
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+              "Username and Password cannot be empty");
     }
     return loginService.getUserFromUsernameLogin(loginRequest);
   }
@@ -50,7 +51,8 @@ public class LoginController {
     if (userRegistrationRequest.getUsername().isEmpty()
             || userRegistrationRequest.getEmail().isEmpty()
             || userRegistrationRequest.getPassword().isEmpty()) {
-      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Username and cannot be empty");
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+              "Username, Email and Password cannot be empty");
     }
     return loginService.createUser(userRegistrationRequest);
   }

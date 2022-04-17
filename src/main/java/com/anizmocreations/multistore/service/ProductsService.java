@@ -1,11 +1,10 @@
 package com.anizmocreations.multistore.service;
 
+import com.anizmocreations.multistore.repository.ProductsRepo;
 import com.anizmocreations.multistore.repository.StoresRepo;
 import com.anizmocreations.multistore.requests.ProductRequest;
 import com.anizmocreations.multistore.responses.ProductResponse;
 import com.anizmocreations.multistore.tables.Product;
-import com.anizmocreations.multistore.repository.ProductsRepo;
-import com.anizmocreations.multistore.utils.Utility;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,7 +14,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.anizmocreations.multistore.utils.Utility.convertProductToProductResponse;
 

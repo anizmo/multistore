@@ -1,8 +1,8 @@
 package com.anizmocreations.multistore.service;
 
+import com.anizmocreations.multistore.repository.LoginRepo;
 import com.anizmocreations.multistore.requests.LoginRequest;
 import com.anizmocreations.multistore.tables.User;
-import com.anizmocreations.multistore.repository.LoginRepo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
