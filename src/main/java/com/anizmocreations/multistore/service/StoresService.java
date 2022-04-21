@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 public class StoresService {
 
   @Autowired
-  StoresRepo storesRepo;
+  private StoresRepo storesRepo;
 
   public StoreResponse getStore(int id) {
     if (id < 0) {

@@ -20,10 +20,10 @@ import java.util.ArrayList;
 public class LoginService {
 
   @Autowired
-  JdbcTemplate jdbcTemplate;
+  private JdbcTemplate jdbcTemplate;
 
   @Autowired
-  LoginRepo loginRepo;
+  private LoginRepo loginRepo;
 
   public User getUserFromUsernameLogin(LoginRequest loginRequest) {
 //    List<User> usersFromJDBC = jdbcTemplate.query("Select * from users", (rs, rowNum) -> {

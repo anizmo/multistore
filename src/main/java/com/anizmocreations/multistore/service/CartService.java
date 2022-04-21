@@ -19,25 +19,13 @@ import static com.anizmocreations.multistore.utils.Utility.convertProductToProdu
 
 @ComponentScan(basePackages = "com.anizmocreations")
 @Service
-public class ProductsService {
+public class CartService {
 
   @Autowired
   private ProductsRepo productsRepo;
 
   @Autowired
   private StoresRepo storesRepo;
-
-  public ProductResponse getProductByProductId(int productId) {
-    final List<Product> products = new ArrayList<>();
-    productsRepo.findById(productId).ifPresent(products::add);
-
-    if (products.size() > 0) {
-      Product product = products.get(0);
-      return convertProductToProductResponse(product);
-    }
-
-    throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product ID does not exist");
-  }
 
   /**
    * Insert a product into the Product Table with the specified parameters in the productRequest.
@@ -47,7 +35,7 @@ public class ProductsService {
    * @param productRequest  Specification of the product to be inserted.
    * @return                Product Response
    */
-  public ProductResponse addProductToDB(ProductRequest productRequest) {
+  public ProductResponse addToCart(ProductRequest productRequest) {
     Product product = new Product();
     product.setProductName(productRequest.getProductName());
     product.setCostPrice(productRequest.getCostPrice());

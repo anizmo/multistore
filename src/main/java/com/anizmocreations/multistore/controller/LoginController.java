@@ -22,7 +22,7 @@ import org.springframework.web.server.ResponseStatusException;
 public class LoginController {
 
   @Autowired
-  LoginService loginService;
+  private LoginService loginService;
 
   @PostMapping(value = "/username")
   @ResponseStatus(HttpStatus.OK)

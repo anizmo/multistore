@@ -27,7 +27,7 @@ import java.util.List;
 public class StoresController {
 
   @Autowired
-  StoresService storesService;
+  private StoresService storesService;
 
   @GetMapping(params = {"id"})
   @ResponseStatus(HttpStatus.OK)
